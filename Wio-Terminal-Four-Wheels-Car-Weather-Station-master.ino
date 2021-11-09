@@ -79,6 +79,7 @@ int Rightcmd_V2;
 int Backwardcmd_V3;
 int Leftcmd_V4;
 int Speed_V5;
+int Estopcmd_V10;
 
 // Speed ratio
 #define RatioM1     1.0
@@ -402,8 +403,8 @@ BLYNK_WRITE(V4)
 
 BLYNK_WRITE(V10)
 {   
-  Leftcmd_V4 = param.asInt(); // Get value as integer
-  if(Leftcmd_V4)
+  Estopcmd_V10 = param.asInt(); // Get value as integer
+  if(Estopcmd_V10)
   {
     RC_Car_EStop();
   }  
